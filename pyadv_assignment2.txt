@@ -1,0 +1,65 @@
+PYTHON ADVANCED ASSIGNMENT 2 
+
+Ans1) The relationship between classes and modules in Python is that a module can contain 
+classes, along with functions, variables, and other code. A module is essentially a file 
+that defines a collection of related code.Modules organize and group related classes together, 
+making the code more modular, reusable, and easier to manage.
+
+Ans2) to create a Class: Use the class keyword followed by the class name.
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+and to create an Instance: Call the class as if it were a function.
+my_instance = MyClass(10)
+This creates an instance 'my_instance' of the class 'MyClass'.
+
+Ans3) Class attributes should be created directly within the class definition, but outside 
+of any methods. They are defined at the same level as the methods and are shared across 
+all instances of the class.
+e.g. class MyClass:
+    # Class attribute
+    class_attribute = "I am a class attribute"
+    
+    def __init__(self, instance_attribute):
+        # Instance attribute
+        self.instance_attribute = instance_attribute
+In this example, class_attribute is a class attribute, meaning it's shared by all 
+instances of MyClass, while instance_attribute is specific to each instance.
+
+Ans4) Instance attributes are created inside the __init__ method of a class. They are 
+defined using self, which refers to the specific instance. 
+e.g. class MyClass:
+    def __init__(self, value):
+        self.instance_attribute = value
+In this example, instance_attribute is created for each instance of MyClass when it's 
+initialized, with its value set by the value argument.
+
+Ans5) self connects the methods and attributes to the particular object they belong to.
+
+Ans6) A Python class handles operator overloading by defining special methods, also known 
+as "magic methods" such as __add__, __sub__, __eq__, etc. These methods correspond to specific 
+operators, allowing you to customize their behavior for class instances.
+e.g. 
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+
+    def __add__(self, other):
+        return MyClass(self.value + other.value)
+
+Ans7) You consider allowing operator overloading in your classes when you want instances 
+of your class to interact with built-in operators (like +, -, ==, etc.) in a meaningful way 
+that aligns with the natural usage of those operators. This is useful when your class represents 
+a concept, like a number, vector, or complex object, where using operators makes the code 
+more intuitive and readable.
+
+Ans8) The most popular form of operator overloading is overloading the addition operator 
+(+) using the '__add__' method. This allows instances of a class to be added together in a 
+natural and intuitive way, similar to how basic data types like integers and strings are added.
+
+Ans9) The two most important concepts to grasp in order to comprehend Python OOP code are 
+classes and inheritance: 
+Classes: Understanding how classes define the blueprint for objects, encapsulating 
+data (attributes) and behavior (methods) within a structured framework.
+Inheritance: Knowing how classes can inherit attributes and methods from other classes, 
+allowing for code reuse and the creation of hierarchical relationships between classes.
